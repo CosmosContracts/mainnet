@@ -37,11 +37,11 @@ A new file `juno_out.json` containing all the airdropped balances will be genera
 Some useful statistics will be printed in the command line: 
 
 ```
-cosmos accounts: 81610
+cosmos accounts: 78254
 atomTotalSupply: 268335648775167
 total staked atoms: 179033710700329
-extra whale amounts: 143423621455513
-total juno airdrop: 35608891684316
+extra whale amounts: 118667082985153
+total juno airdrop: 30663193590002
 ```
 
 We will need this information to calculate multi-sig dev fund amount, incentivized testnet amount and community pool amount.
@@ -101,9 +101,9 @@ Now you can compare the SHA256 hash of the provieded genesis.json with yours.
 
 ```
 $ sha256sum juno-1/genesis.json 
-2e062a9aee8f51ea60b433ffaba4085a61a6467ceadd19196f71394da9336950  juno-1/genesis.json
+f88960195fe6f81d378fbb63801f57d8389568aa06c2d4652b0c7266c6f7fa68  juno-1/genesis.json
 
 
 $ sha256sum juno-1/my-genesis.json 
-2e062a9aee8f51ea60b433ffaba4085a61a6467ceadd19196f71394da9336950  juno-1/my-genesis.json
+f88960195fe6f81d378fbb63801f57d8389568aa06c2d4652b0c7266c6f7fa68  juno-1/my-genesis.json
 ```
