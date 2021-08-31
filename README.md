@@ -4,12 +4,14 @@ Repository to keep track of Juno genesis files and validators GenTxs
 
 # How to verify Genesis
 
-## Requirements 
+## Requirements
+
 1. A synced cosmoshub-3 node with pruning default ([backup here](https://archive.interchain.io))
-2. Latest [juno](https://github.com/CosmosContracts/Juno) binary 
+2. Latest [juno](https://github.com/CosmosContracts/Juno) binary on branch `zaki-airdrop`
 3. Exchanges list JSON [file](./exchanges.json)
 
 ## Parameters
+
 You can find a list of parameters in the following table `parameters.md`
 
 ## Procedure
@@ -22,19 +24,19 @@ First we need to export state from the hub3 snapshot, if we have a synced node i
 gaiad export --height 5200790 > cosmoshub3.json
 ```
 
-a file named `cosmoshub3.json` will be generated containing the state of Cosmos Hub on block before the stargate upgrade. 
+a file named `cosmoshub3.json` will be generated containing the state of Cosmos Hub on block before the stargate upgrade.
 
 ### Generate balances snapshot
 
-Now we need to parse all the balances of cosmoshub 3 and generate a file with filtered accounts, to do so run the following command: 
+Now we need to parse all the balances of cosmoshub 3 and generate a file with filtered accounts, to do so run the following command:
 
 ```
 junod export-airdrop-snapshot uatom cosmoshub3.json exchanges.json juno_out.json --juno-whalecap 50000000000
-``` 
+```
 
-A new file `juno_out.json` containing all the airdropped balances will be generated. 
+A new file `juno_out.json` containing all the airdropped balances will be generated.
 
-Some useful statistics will be printed in the command line: 
+Some useful statistics will be printed in the command line:
 
 ```
 cosmos accounts: 78254
@@ -48,43 +50,36 @@ We will need this information to calculate multi-sig dev fund amount, incentiviz
 
 ### Init the genesis file
 
-Now we can start forging the genesis file, let's start using the traditional cosmos-sdk init command 
+Now we can start forging the genesis file, let's start using the traditional cosmos-sdk init command
 
 ```
 junod init <moniker> --chain-id juno-1
 ```
 
-An empty genesis.json file will be created in your `.juno/config` directory. 
+An empty genesis.json file will be created in your `.juno/config` directory.
 
 ### Add airdrop accounts
 
 Now we can add all the airdrop accounts generated in the `juno_out.json` file before, running the following command
 
 ```
-junod add-airdrop-accounts juno_out.json ujuno
+junod add-airdrop-accounts juno_out.json ujuno 20000000000000
 ```
 
 It may take from 30 minutes up to a couple of hours, depending on your system specs.
 
-### Add community pool amount
+### Add vesting and multisig amounts
 
-Open the geneis.json file manually with your favorite text editor, and find the following section inside `app_data.distribution.fee_pool.community_pool`
+To add the core team and multisig vesting accounts we developed an utility to do so `genesis-utils`, it's enough to clone that repository and run the following commands:
 
-```json
-"fee_pool": {
-    "community_pool": []
-},
 ```
-
-we need to add the community pool amount, so replace it with
-
-```json
-"fee_pool": {
-    "community_pool": [{
-        "denom": "ujuno",
-        "amount": 20000000000000
-    }]
-}
+    npm install
+    npm run add-vesting-account juno1a8u47ggy964tv9trjxfjcldutau5ls705djqyu fulltime_periods.csv ~/.juno/config/genesis.json
+    npm run add-vesting-account juno17py8gfneaam64vt9kaec0fseqwxvkq0flmsmhg fulltime_periods.csv ~/.juno/config/genesis.json
+    npm run add-vesting-account juno130mdu9a0etmeuw52qfxk73pn0ga6gawk4k539x partime_periods.csv ~/.juno/config/genesis.json
+    npm run add-vesting-account juno18qw9ydpewh405w4lvmuhlg9gtaep79vy2gmtr2 fulltime_periods.csv ~/.juno/config/genesis.json
+    npm run add-vesting-account juno1s33zct2zhhaf60x4a90cpe9yquw99jj0zen8pt fulltime_periods.csv ~/.juno/config/genesis.json
+    npm run add-vesting-account juno190g5j8aszqhvtg7cprmev8xcxs6csra7xnk3n3 multisig_periods.csv ~/.juno/config/genesis.json
 ```
 
 ### Add Multi Sig Amount
@@ -92,7 +87,7 @@ we need to add the community pool amount, so replace it with
 Use the following command to add multi-sig amount, that will include dev fund and incentivized testnet prize
 
 ```
-junod add-genesis-account juno196jh55p8p65ekee3c6vqfdh2xtny2u8pkl67r7 17210834520000ujuno
+junod add-genesis-account juno190g5j8aszqhvtg7cprmev8xcxs6csra7xnk3n3 12756711000000ujuno
 ```
 
 ### Compare SHA256 Sum
@@ -100,10 +95,10 @@ junod add-genesis-account juno196jh55p8p65ekee3c6vqfdh2xtny2u8pkl67r7 1721083452
 Now you can compare the SHA256 hash of the provieded genesis.json with yours.
 
 ```
-$ sha256sum juno-1/genesis.json 
+$ sha256sum juno-1/genesis.json
 f88960195fe6f81d378fbb63801f57d8389568aa06c2d4652b0c7266c6f7fa68  juno-1/genesis.json
 
 
-$ sha256sum juno-1/my-genesis.json 
+$ sha256sum juno-1/my-genesis.json
 f88960195fe6f81d378fbb63801f57d8389568aa06c2d4652b0c7266c6f7fa68  juno-1/my-genesis.json
 ```
