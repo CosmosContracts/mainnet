@@ -88,9 +88,9 @@ junod add-airdrop-accounts juno_out.json ujuno 20000000000000
 
 It may take from 30 minutes up to a couple of hours, depending on your system specs.
 
-### Add vesting and multisig amounts
+### Add vesting and multisig amounts
 
-To add the core team and multisig vesting accounts we developed an utility to do so `genesis-utils`, it's enough to clone that repository and run the following commands:
+To add the core team and multisig vesting accounts we developed an utility to do so [genesis-utils](https://github.com/CosmosContracts/genesis-utils), it's enough to clone that repository and run the following commands:
 
 ```
     npm install
