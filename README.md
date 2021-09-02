@@ -114,9 +114,9 @@ Now you can compare the SHA256 hash of the provieded genesis.json with yours.
 
 ```
 $ jq -S -c -M '' juno-1/pre-genesis.json | shasum -a 256
-3233838e0e576b8f101ee4e5349f414e082b9d862db62a327743f3eb12a83a74  -
+6deda53c1c1654034735c9abf528539f041af6d9de8da8509c9de9a256ea52a6  -
 
 
 $ jq -S -c -M '' ~/.juno/config/genesis.json | shasum -a 256
-3233838e0e576b8f101ee4e5349f414e082b9d862db62a327743f3eb12a83a74  -
+6deda53c1c1654034735c9abf528539f041af6d9de8da8509c9de9a256ea52a6  -
 ```
