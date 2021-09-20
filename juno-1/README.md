@@ -17,16 +17,17 @@ You will need to have received Juno in the airdrop to successfully submit a gent
 
 You need to ensure your gopath configuration is correct. If the following **'make'** step does not work then you might have to add these lines to your .profile or .zshrc in the users home folder:
 
-```
+```bash
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export GO111MODULE=on
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 ```
 
-```sh
+```bash
 git clone https://github.com/CosmosContracts/Juno
-cd Juno
+cd juno
+git checkout juno-1
 make build && make install
 ```
 
@@ -34,7 +35,7 @@ This will build and install `junod` binary into `$GOBIN`.
 
 Note: When building from source, it is important to have your `$GOPATH` set correctly. When in doubt, the following should do:
 
-```sh
+```bash
 mkdir ~/go
 export GOPATH=~/go
 ```
@@ -57,29 +58,29 @@ Similar to Osmosis, only nodes that received the airdrop will be able to validat
    chain-id
 
    ```bash
-   junod init <moniker-name> --chain-id=juno-1
+   junod init <MONIKER-NAME> --chain-id=juno-1
    ```
 
 2. Create a local key pair (you should use the same key associated with you airdropped account)
 
-   ```sh
-   > junod keys add <key-name>
+   ```bash
+   junod keys add <key-name>
    ```
 
-   Note: if you're using an offline key for signing (for example, with a Ledger), do this with `junod keys add <key-name> --pubkey <your-pubkey>`. For the rest of the transactions, you will use the `--generate-only` flag and sign them offline with `junod tx sign`.
+   Note: if you're using an offline key for signing (for example, with a Ledger), do this with `junod keys add <KEY-NAME> --pubkey <YOUR-PUBKEY>`. For the rest of the transactions, you will use the `--generate-only` flag and sign them offline with `junod tx sign`.
 
 3. Download the pre-genesis file:
 
-   ```sh
+   ```bash
    curl -s  https://raw.githubusercontent.com/CosmosContracts/mainnet/main/juno-1/pre-genesis.json >~/.juno/config/genesis.json
    ```
 
    Find your account in the `juno-1/pre-genesis.json` file. The balance of your airdrop is what you'll be able to use with your validator.
 
-4. Create the gentx:
+4. Create the gentx, replace `<KEY-NAME>` and `<BALANCE>`:
 
    ```bash
-   junod gentx <key-name> <balance>ujuno --chain-id=juno-1
+   junod gentx <KEY-NAME> <BALANCE>ujuno --chain-id=juno-1
    ```
 
    If all goes well, you will see a message similar to the following:
@@ -92,44 +93,44 @@ Similar to Osmosis, only nodes that received the airdrop will be able to validat
 
 - Fork this repo into your Github account
 
-- Clone your repo using
+- Clone your repo using:
 
   ```bash
-  git clone https://github.com/<your-github-username>/mainnet
+  git clone https://github.com/<YOUR-GITHUB-USERNAME>/mainnet
   ```
 
-- Copy the generated gentx json file to `<repo_path>/juno-1/gentx/`
+- Copy the generated gentx json file to `<REPO-PATH>/juno-1/gentx/`
 
-  ```sh
-  > cd mainnet
-  > cp ~/.juno/config/gentx/gentx*.json ./juno-1/gentx/
+  ```bash
+  cd mainnet
+  cp ~/.juno/config/gentx/gentx*.json ./juno-1/gentx/
   ```
 
 - Commit and push to your repo
 - Create a PR onto https://github.com/CosmosContracts/mainnet
-- Only PRs from individuals / groups with a history successfully running nodes will be accepted. This is to ensure the network successfully starts on time.
+- Only PRs from individuals / groups with a history successfully running validator nodes and that have initial juno balance from the stakedrop will be accepted. This is to ensure the network successfully starts on time.
 
 #### Running in production
 
-**Note, we'll be going through some upgrades soon after Juno mainnet. Consider using [Cosmovisor](https://github.com/cosmos/cosmos-sdk/tree/master/cosmovisor) to make your life easier.**
+**Note, we'll be going through some upgrades soon after Juno mainnet. Consider using [Cosmovisor](https://docs.junochain.com/validators/setting-up-cosmovisor) to make your life easier.**
 
-Download Genesis file when the time is right. Put it in your `/home/user/.juno` folder.
+Download Genesis file when the time is right. Put it in your `/home/<YOUR-USERNAME>/.juno` folder.
 
 Create a systemd file for your Juno service:
 
-```sh
-sudo vi /etc/systemd/system/junod.service
+```bash
+sudo nano /etc/systemd/system/junod.service
 ```
 
-Copy and paste the following and update `<YOUR_USERNAME>`, `<GO_WORKSPACE>`, and `<CHAIN_ID>`:
+Copy and paste the following and update `<YOUR-USERNAME>`:
 
-```sh
+```bash
 Description=Juno daemon
 After=network-online.target
 
 [Service]
-User=root
-ExecStart=/home/<YOUR_USERNAME>/<GO_WORKSPACE>/go/bin/junod start --p2p.laddr tcp://0.0.0.0:26656 --home /home/<YOUR_USERNAME>/.juno
+User=<YOUR_USERNAME>
+ExecStart=/home/<YOUR-USERNAME>/go/bin/junod start --home /home/<YOUR-USERNAME>/.juno
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=4096
@@ -138,31 +139,29 @@ LimitNOFILE=4096
 WantedBy=multi-user.target
 ```
 
-2
-**This assumes `$HOME/go_workspace` to be your Go workspace, and `$HOME/.juno` to be your directory for config and data. Your actual directory locations may vary.**
+**This assumes  `$HOME/.juno` to be your directory for config and data. Your actual directory locations may vary.**
 
 Enable and start the new service:
 
-```sh
+```bash
 sudo systemctl enable junod
 sudo systemctl start junod
 ```
 
 Check status:
 
-```sh
+```bash
 junod status
 ```
 
 Check logs:
 
-```sh
+```bash
 journalctl -u junod -f
 ```
 
 ### Learn more
 
-- [Starport](https://github.com/tendermint/starport)
-- [SPN](https://github.com/tendermint/spn)
-- [Cosmos Network](https://cosmos.network)
-- [Cosmos Community Discord](https://discord.com/invite/W8trcGV) (check out the #starport channel)
+- [Juno Documentation](https://docs.junochain.com)
+- [Juno Community Discord](https://discord.gg/QcWPfK4gJ2)
+- [Juno Community Telegram](https://t.me/joinchat/R7QKD0ltosphNWNk)
