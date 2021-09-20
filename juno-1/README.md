@@ -1,5 +1,8 @@
 # Junø - Mainnet
 
+![JUNOVERSE 34](https://user-images.githubusercontent.com/79812965/134063436-6f1bda5c-56f3-4bf3-a3a0-2b93f24217b1.png)
+
+
 _Planned Start Time: October 1st at 15:00 UTC._
 
 Please have your gentx submitted by Wednesday, September 29th, 10pm UTC if you wish to participate.
