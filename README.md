@@ -1,6 +1,7 @@
 # Juno Mainnet
 
-![JUNOVERSE 31](https://user-images.githubusercontent.com/79812965/134058326-d79e1734-11ae-49e8-baea-50680c4d76f0.png)
+![JUNOVERSE 35](https://user-images.githubusercontent.com/79812965/134061108-06a7be5e-c3ba-4c59-9e1e-70462a3e7bc8.png)
+
 
 
 Repository to keep track of Juno genesis files and validators GenTxs. For instructions on submitting a Gentx, see the [juno-1 README](./juno-1).
