@@ -1,6 +1,6 @@
 # Juno Mainnet
 
-Repository to keep track of Juno genesis files and validators GenTxs
+Repository to keep track of Juno genesis files and validators GenTxs. For instructions on submitting a Gentx, see the [juno-1 README](./juno-1).
 
 # How to verify Genesis
 
@@ -20,7 +20,6 @@ You can find a list of parameters in the following table `parameters.md`
 
 First we need to clone Juno repository, checkout the mainnet branch `v1.0.0` and compile. Make sure to have go at version `1.16` or above
 
-
 ```
 git clone git@github.com:CosmosContracts/juno.git
 cd juno
@@ -36,13 +35,13 @@ Delete the old `.juno` directory
 rm -rf ~/.juno
 ```
 
-Now we can start forging the genesis file, let's start using the traditional cosmos-sdk init command 
+Now we can start forging the genesis file, let's start using the traditional cosmos-sdk init command
 
 ```
 junod init <moniker> --chain-id juno-1
 ```
 
-An empty genesis.json file will be created in your `.juno/config` directory. 
+An empty genesis.json file will be created in your `.juno/config` directory.
 
 ### Export cosmoshub-3 snapshot
 
@@ -54,9 +53,7 @@ gaiad export --height 5200790 > cosmoshub3.json
 
 a file named `cosmoshub3.json` will be generated containing the state of Cosmos Hub on block before the stargate upgrade.
 
-
 If you don't have a synced node, you can download the export from here [cosmoshub_3_genesis_export.zip](https://gateway.pinata.cloud/ipfs/QmWmFUDFKWfn36De4mTxTJK493EeCE9nh4EtTWt4sUgkp7)
-
 
 ### Generate balances snapshot
 
