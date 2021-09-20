@@ -9,12 +9,12 @@ GENTX_FILE=$(find ./$CHAIN_ID/gentx -iname "*.json")
 LEN_GENTX=$(echo ${#GENTX_FILE})
 
 # Gentx Start date
-start="2021-09-01 01:00:00Z"
+start="2021-09-19 01:00:00Z"
 # Compute the seconds since epoch for start date
 stTime=$(date --date="$start" +%s)
 
 # Gentx End date
-end="2021-09-08 10:00:00Z"
+end="2021-09-29 22:00:00Z"
 # Compute the seconds since epoch for end date
 endTime=$(date --date="$end" +%s)
 
@@ -25,13 +25,13 @@ curTime=$(date --date="$current" +%s)
 
 if [[ $curTime < $stTime ]]; then
     echo "start=$stTime:curent=$curTime:endTime=$endTime"
-    echo "Gentx submission is not open yet. Please close the PR and raise a new PR after 30-August-2021 10:00:00 UTC"
-    exit 0
+    echo "Gentx submission is not open yet."
+    exit 1
 else
     if [[ $curTime > $endTime ]]; then
         echo "start=$stTime:curent=$curTime:endTime=$endTime"
         echo "Gentx submission is closed"
-        exit 0
+        exit 1
     else
         echo "Gentx is now open"
         echo "start=$stTime:curent=$curTime:endTime=$endTime"
