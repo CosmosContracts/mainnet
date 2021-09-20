@@ -1,4 +1,4 @@
-# Junø - Hera Testnet
+# Junø - Mainnet
 
 _Planned Start Time: October 1st at 15:00 UTC._
 
