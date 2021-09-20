@@ -48,7 +48,7 @@ Below are the instructions to generate & submit your genesis transaction
 
 ### Generate genesis transaction (gentx)
 
-This testnet is a simulation of Juno mainnet. Similar to Osmosis, only nodes that received the airdrop will be able to validate. Others will be able to join the validator set at a later date.
+Similar to Osmosis, only nodes that received the airdrop will be able to validate. Others will be able to join the validator set at a later date.
 
 1. Initialize the Juno directories and create the local genesis file with the correct
    chain-id
@@ -63,7 +63,7 @@ This testnet is a simulation of Juno mainnet. Similar to Osmosis, only nodes tha
    > junod keys add <key-name>
    ```
 
-   Note: since this testnet involves using the same Cosmos Hub key that you received your airdrop with, you may wish to use an offline key. Do this with `junod keys add <key-name> --pubkey <your-pubkey>`. For the rest of the transactions, you will use the `--generate-only` flag and sign them offline with `junod tx sign`.
+   Note: if you're using an offline key for signing (for example, with a Ledger), do this with `junod keys add <key-name> --pubkey <your-pubkey>`. For the rest of the transactions, you will use the `--generate-only` flag and sign them offline with `junod tx sign`.
 
 3. Download the pre-genesis file:
 
@@ -87,23 +87,23 @@ This testnet is a simulation of Juno mainnet. Similar to Osmosis, only nodes tha
 
 ### Submit genesis transaction
 
-- Fork [the testnets repo](https://github.com/CosmosContracts/testnets) into your Github account
+- Fork this repo into your Github account
 
 - Clone your repo using
 
   ```bash
-  git clone https://github.com/<your-github-username>/testnets
+  git clone https://github.com/<your-github-username>/mainnet
   ```
 
 - Copy the generated gentx json file to `<repo_path>/juno-1/gentx/`
 
   ```sh
-  > cd testnets
+  > cd mainnet
   > cp ~/.juno/config/gentx/gentx*.json ./juno-1/gentx/
   ```
 
 - Commit and push to your repo
-- Create a PR onto https://github.com/CosmosContracts/testnets
+- Create a PR onto https://github.com/CosmosContracts/mainnet
 - Only PRs from individuals / groups with a history successfully running nodes will be accepted. This is to ensure the network successfully starts on time.
 
 #### Running in production
