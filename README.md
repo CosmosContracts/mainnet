@@ -1,7 +1,5 @@
 # Juno Mainnet
 
-![JUNOVERSE 34](https://user-images.githubusercontent.com/79812965/134062086-2867a2d1-1872-4d8f-a497-f235bca3204b.png)
-
 
 
 
