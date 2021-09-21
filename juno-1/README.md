@@ -43,7 +43,7 @@ export GOPATH=~/go
 ### Minimum hardware requirements
 
 - 2GB RAM
-- 25GB of disk space
+- 250GB of disk space
 - 1.4 GHz amd64 CPU
 
 ## Setup validator node
