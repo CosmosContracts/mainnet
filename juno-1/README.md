@@ -42,7 +42,7 @@ export GOPATH=~/go
 
 ### Minimum hardware requirements
 
-- 2GB RAM
+- 4GB RAM
 - 250GB of disk space
 - 1.4 GHz amd64 CPU
 
