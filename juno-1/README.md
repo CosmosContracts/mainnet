@@ -7,7 +7,7 @@ _Planned Start Time: October 1st at 15:00 UTC._
 
 Please have your gentx submitted by Wednesday, September 29th, 10pm UTC if you wish to participate.
 
-You will need to have received Juno in the airdrop to successfully submit a gentx.
+You will NEED to qualify for the Juno stakedrop (Feb 18th Cosmos Hub-3 Snapshot) to successfully submit a gentx. Alternatively validators may join the mainnet after block 1 by contacting the core development team and requesting some Juno to spin up or aquiring some Juno via Osmosis AMM shortly after launch.
 
 ## Setup
 
