@@ -24,7 +24,7 @@
         },
         "value": {
           "denom": "ujuno",
-          "amount": "50000000"
+          "amount": "50000000000"
         }
       }
     ],
@@ -56,6 +56,6 @@
     }
   },
   "signatures": [
-    "5JyGKwbS5fCmMlTGaR2/zkRaNoOQQIUTDFpG0oJrZkck2s+ylhIRdEQPcc4PjfXsNs1MQ6NwkIzxQfehaoW++w=="
+    "AKcN4hy+jh+5sjvvxWDC91+fqbfxBYrSb3m97IWvjh9HR9Z9/AEpWuiCclpfposykl7f9UBb4xYy15TBszBuiw=="
   ]
 }
