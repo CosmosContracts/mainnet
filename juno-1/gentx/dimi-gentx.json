@@ -20,7 +20,7 @@
         "validator_address": "junovaloper1s33zct2zhhaf60x4a90cpe9yquw99jj0ay9g6j",
         "pubkey": {
           "@type": "/cosmos.crypto.ed25519.PubKey",
-          "key": "lqRzQOhxgmxiYiYZw/NPLRHVT1hYbNNu5KgNH6ra2BM="
+          "key": "A1dVJUaGuEAbn1Yco1QbJPSMgPoK63UNo2Tk7D+VTlY="
         },
         "value": {
           "denom": "ujuno",
@@ -56,6 +56,6 @@
     }
   },
   "signatures": [
-    "AKcN4hy+jh+5sjvvxWDC91+fqbfxBYrSb3m97IWvjh9HR9Z9/AEpWuiCclpfposykl7f9UBb4xYy15TBszBuiw=="
+    "xGN7DI217Wi3QG2EB7pwKjrl6ZsZodd93JdTkiTN7/s/ZevjoTJcq+2I3HqUdQY81nwjpX9al5qVwWBVI7kkVw=="
   ]
 }
