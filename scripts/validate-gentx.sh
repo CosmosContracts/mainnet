@@ -51,7 +51,7 @@ else
 
     git clone https://github.com/CosmosContracts/Juno
     cd Juno
-    git checkout hera
+    git checkout juno-1
     make build
     chmod +x ./bin/junod
 
