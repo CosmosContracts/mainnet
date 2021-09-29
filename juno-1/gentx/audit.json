@@ -4,7 +4,7 @@
       {
         "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
         "description": {
-          "moniker": "audit",
+          "moniker": "AUDIT.one",
           "identity": "5736C325251A8046",
           "website": "https://audit.one",
           "security_contact": "hello@audit.one",
@@ -28,7 +28,7 @@
         }
       }
     ],
-    "memo": "",
+    "memo": "295592631cf957bef593cc7b89f9fe3e0eb030e5@192.168.0.122:26656",
     "timeout_height": "0",
     "extension_options": [],
     "non_critical_extension_options": []
@@ -56,6 +56,6 @@
     }
   },
   "signatures": [
-    "VCSMVX6sc8uCtJZogJDAnPAzkA+3k+IigPZivWPjAwAKMgYLoQJdRWHDvICQDFCddxY9i56alXb3UFQanSfDig=="
+    "325nLLaDms1K+ngHIi/AoXxbbkKxhU5pUmfdkJDBpgQkDHO2TaGvM6furTN+TZBwhRV6bHCP1DuXXWBgG/WAdQ=="
   ]
 }
