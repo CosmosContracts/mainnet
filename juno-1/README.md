@@ -2,12 +2,32 @@
 
 ![JUNOVERSE 34](https://user-images.githubusercontent.com/79812965/134063436-6f1bda5c-56f3-4bf3-a3a0-2b93f24217b1.png)
 
-
 _Planned Start Time: October 1st at 15:00 UTC._
 
-Please have your gentx submitted by Wednesday, September 29th, 10pm UTC if you wish to participate.
+**Genesis File**
 
-You will NEED to qualify for the Juno stakedrop (Feb 18th Cosmos Hub-3 Snapshot) to successfully submit a gentx. Alternatively validators may join the mainnet after block 1 by contacting the core development team and requesting some Juno to spin up or aquiring some Juno via Osmosis AMM shortly after launch.
+[Genesis File](/juno-1/genesis.json):
+
+```bash
+   curl -s  https://raw.githubusercontent.com/CosmosContracts/mainnet/main/juno-1/genesis.json >~/.juno/config/genesis.json
+```
+
+**Genesis sha256**
+
+```bash
+sha256sum ~/.juno/config/genesis.json
+a5c08e53aca0390c45def85a6d16c0e7176bd0026b0a465aff5d1896ec0134a1
+```
+
+**junod version**
+
+```bash
+$ junod version --long
+name: juno
+server_name: junod
+version: HEAD-e507450f2e20aa4017e046bd24a7d8f1d3ca437a
+commit: e507450f2e20aa4017e046bd24a7d8f1d3ca437a
+```
 
 ## Setup
 
@@ -50,7 +70,7 @@ export GOPATH=~/go
 
 Below are the instructions to generate & submit your genesis transaction
 
-### Generate genesis transaction (gentx)
+### Generate genesis transaction (pre-launch only)
 
 Similar to Osmosis, only nodes that received the airdrop will be able to validate. Others will be able to join the validator set at a later date.
 
@@ -139,7 +159,7 @@ LimitNOFILE=4096
 WantedBy=multi-user.target
 ```
 
-**This assumes  `$HOME/.juno` to be your directory for config and data. Your actual directory locations may vary.**
+**This assumes `$HOME/.juno` to be your directory for config and data. Your actual directory locations may vary.**
 
 Enable and start the new service:
 
