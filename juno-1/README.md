@@ -29,6 +29,14 @@ version: HEAD-e507450f2e20aa4017e046bd24a7d8f1d3ca437a
 commit: e507450f2e20aa4017e046bd24a7d8f1d3ca437a
 ```
 
+**Seed node**
+
+[Full seed nodes list](/juno-1/seeds.txt).
+
+```
+2484353dab0b2c1275765b8ffa2c50b3b36158ca@seed-node.junochain.com:26656
+```
+
 ## Setup
 
 **Prerequisites:** Make sure to have [Golang >=1.17](https://golang.org/).
