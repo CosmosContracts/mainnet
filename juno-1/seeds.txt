@@ -1,2 +1,1 @@
-2484353dab0b2c1275765b8ffa2c50b3b36158ca@seed-node.junochain.com:26656
-ef2315d81caa27e4b0fd0f267d301569ee958893@juno-seed.blockpane.com:26656
+2484353dab0b2c1275765b8ffa2c50b3b36158ca@seed-node.junochain.com:26656,ef2315d81caa27e4b0fd0f267d301569ee958893@juno-seed.blockpane.com:26656
