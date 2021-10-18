@@ -7,7 +7,7 @@
     "daemon_name": "junod",
     "node_home": "$HOME/.juno",
     "genesis": {
-        "https://raw.githubusercontent.com/CosmosContracts/mainnet/main/juno-1/genesis.json",
+         "genesis_url": "https://raw.githubusercontent.com/CosmosContracts/mainnet/main/juno-1/genesis.json",
         "genesis_zipped": false
     },
     "codebase": {
