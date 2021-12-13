@@ -36,6 +36,10 @@ $DAEMON_HOME/cosmovisor/upgrades/moneta/bin/junod version
 
 Fees are set by each individual validator. The ability to spam TXs (Smart Contracts or otherwise) is a potential attack vector for the Juno network, so if you haven't already set minimum gas prices, please change these in `.juno/config/app.toml`. We suggest `0.025ujuno`.
 
+```
+perl -i -pe 's/^minimum-gas-prices = .+?$/minimum-gas-prices = "0.025ujuno"/' ~/.juno/config/app.toml
+```
+
 ## Commission
 
 [Juno Governance Proposal 3](https://www.mintscan.io/juno/proposals/3) signalled the community wanted to impose a minimum validator commission. If your validator has already increased to the minimum, then thank you. All other validators will have their commission forcibly increased by this update, if it is below the minimum.
