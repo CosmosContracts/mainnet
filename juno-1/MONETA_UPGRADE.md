@@ -10,7 +10,7 @@ There's a dashboard from `cros-nest` that allows you to [check the rough ETA](ht
 
 Nevertheless, you should really be automating this rather than switching over manually. Most mainnet validators are running Cosmovisor, and [a setup guide can be found in our docs](https://docs.junonetwork.io/validators/setting-up-cosmovisor).
 
-Cosmovisor instructions:
+If you use cosmovisor, do this now:
 
 ```bash
 # get the new version (from inside the juno repo)
@@ -31,6 +31,8 @@ cp /home/<your-user>/go/bin/junod $DAEMON_HOME/cosmovisor/upgrades/moneta/bin
 # find out what version you are about to run - should be v2.0.6
 $DAEMON_HOME/cosmovisor/upgrades/moneta/bin/junod version
 ```
+
+When the block height is reached, Cosmovisor will backup the chain data and point to the new v2.0.6 binary
 
 ## Fees
 
