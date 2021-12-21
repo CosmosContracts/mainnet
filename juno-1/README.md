@@ -136,7 +136,7 @@ Similar to Osmosis, only nodes that received the airdrop will be able to validat
 
 - Commit and push to your repo
 - Create a PR onto https://github.com/CosmosContracts/mainnet
-- Only PRs from individuals / groups with a history successfully running validator nodes and that have initial juno balance from the stakedrop will be accepted. This is to ensure the network successfully starts on time.
+- Only PRs from individuals / groups with a history of successfully running validator nodes and that have initial juno balance from the stakedrop will be accepted. This is to ensure the network successfully starts on time.
 
 #### Running in production
 
