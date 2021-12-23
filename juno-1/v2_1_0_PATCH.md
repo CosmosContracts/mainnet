@@ -5,6 +5,8 @@ Originally we had planned on a straight-up `v2.2.0` release, but testing that in
 - **Until you have patched your node, it is vulnerable**
 - **Until 2/3 of validators have patched their nodes, the network is vulnerable**
 
+So you can understand our desire to get the entire validator set _patched as soon as possible_.
+
 For this update, you should update using the patched binary supplied on the `v2.1.0` release. It contains a statically compiled wasmvm that needs to be built on alpine.
 
 This patched `junod` binary can be run on a linux box. It was built on alpine and has been tested on various Ubuntu LTSs and Debian bullseye. If you are concerned about your OS, then try patching a sentry first before patching your validator.
