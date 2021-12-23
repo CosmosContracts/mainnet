@@ -50,6 +50,7 @@ If you are using a service file that points to this `junod`, you can restart the
 
 If you are using cosmovisor:
 
+- follow the steps above to download and verify the binary
 - stop cosmovisor
 - copy the binary `cp /home/<your-user>/go/bin/junod $DAEMON_HOME/cosmovisor/upgrades/moneta-patch/bin`
 - check the binary has the `muslc` flag in the output for `$DAEMON_HOME/cosmovisor/upgrades/moneta-patch/bin/junod version --long`
