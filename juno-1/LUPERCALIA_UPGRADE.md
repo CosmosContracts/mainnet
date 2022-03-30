@@ -31,3 +31,13 @@ $DAEMON_HOME/cosmovisor/upgrades/lupercalia/bin/junod version
 ```
 
 Alternatively, you can run the upgrade the old-fashioned way.
+
+### After the upgrade
+
+To save some space you may also want to delete the old wasm cache at:
+
+```sh
+.juno/data/wasm/cache/modules/v1
+```
+
+Note: only do this after the upgrade has completed.
