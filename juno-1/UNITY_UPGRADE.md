@@ -2,7 +2,7 @@
 
 This upgrade confiscates the funds into the governance-controlled Unity smart contract.
 
-[Lupercalia's upgrade Proposal is viewable here](https://www.mintscan.io/juno/proposals/20).
+[Lupercalia's Phase 2 Unity Upgrade Proposal is viewable here](https://www.mintscan.io/juno/proposals/20).
 
 These are the instructions you will need if you run cosmovisor:
 
