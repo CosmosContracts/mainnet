@@ -1,4 +1,4 @@
-# Juno Lupercalia Phase 3
+# Veritas Upgrade
 
 This upgrade relocates the confiscated funds to the governance-controlled Unity smart contract.
 
