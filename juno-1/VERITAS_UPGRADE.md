@@ -13,9 +13,9 @@ make build && make install
 # this will return commit 77fdc2e9b0b380f640286745356384c64d86fd32
 junod version --long
 
-mkdir -p $DAEMON_HOME/cosmovisor/upgrades/unity/bin && cp $HOME/go/bin/junod $DAEMON_HOME/cosmovisor/upgrades/unity/bin
+mkdir -p $DAEMON_HOME/cosmovisor/upgrades/veritas/bin && cp $HOME/go/bin/junod $DAEMON_HOME/cosmovisor/upgrades/veritas/bin
 # this will return v5.0.1
-$DAEMON_HOME/cosmovisor/upgrades/unity/bin/junod version
+$DAEMON_HOME/cosmovisor/upgrades/veritas/bin/junod version
 ```
 
 Alternatively, you can run the upgrade the old-fashioned way.
