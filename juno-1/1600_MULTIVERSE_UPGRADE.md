@@ -14,7 +14,7 @@ Additional links:
 
 The target block for this upgrade is [3851750](https://www.mintscan.io/juno/blocks/3851750), which is expected to arrive on _Thursday July 7th at 1700UTC_, +/- 1 hour.
 
-Note that go 1.18 is now required - so you will need to remove any older version of go and install the right version if you are building manually.
+Note that *go 1.18 is now required* - so you will need to remove any older version of go and install the right version if you are building manually.
 
 These are the instructions you will need if you run cosmovisor:
 
