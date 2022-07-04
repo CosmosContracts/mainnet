@@ -25,9 +25,9 @@ make build && make install
 # this will return commit 1291b66f3cd3529ad244391619f7b4166bb28373
 junod version --long
 
-mkdir -p $DAEMON_HOME/cosmovisor/upgrades/veritas/bin && cp $HOME/go/bin/junod $DAEMON_HOME/cosmovisor/upgrades/veritas/bin
+mkdir -p $DAEMON_HOME/cosmovisor/upgrades/multiverse/bin && cp $HOME/go/bin/junod $DAEMON_HOME/cosmovisor/upgrades/multiverse/bin
 # this will return v7.0.0
-$DAEMON_HOME/cosmovisor/upgrades/veritas/bin/junod version
+$DAEMON_HOME/cosmovisor/upgrades/multiverse/bin/junod version
 ```
 
 Alternatively, you can run the upgrade the old-fashioned way.
