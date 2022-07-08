@@ -1,5 +1,7 @@
 # Multiverse Upgrade
 
+**NB:** This upgrade was originally using the `v7.0.0` binary, but ultimately the `v8.0.0` binary had to be used to get around [this issue](https://github.com/cosmos/cosmos-sdk/issues/11707).
+
 Multiverse adds ICA Host functionality to the Juno chain, and exposes the following actions to Controller Chains:
 
 - Native functionality and core SDK modules
@@ -10,7 +12,7 @@ Multiverse adds ICA Host functionality to the Juno chain, and exposes the follow
 Additional links:
 
 - [The Multiverse upgrade prop is viewable here](https://www.mintscan.io/juno/proposals/28).
-- [The v7.0.0 changelog is viewable here](https://github.com/CosmosContracts/juno/releases/tag/v7.0.0).
+- [The v7.0.0 changelog is viewable here](https://github.com/CosmosContracts/juno/releases/tag/v7.0.0). Note however that `v8.0.0` should be used for the upgrade, as it fixes a bug that manifested at the upgrade block.
 
 The target block for this upgrade is [3851750](https://www.mintscan.io/juno/blocks/3851750), which is expected to arrive on _Thursday July 7th at 1700UTC_, +/- 1 hour.
 
@@ -20,13 +22,13 @@ These are the instructions you will need if you run cosmovisor:
 
 ```bash
 cd juno
-git fetch --tags && git checkout v7.0.0
+git fetch --tags && git checkout v8.0.0
 make build && make install
-# this will return commit 1291b66f3cd3529ad244391619f7b4166bb28373
+# this will return commit d0d9f36c5cb4e0128d903bbfd41c96266f0496d8
 junod version --long
 
 mkdir -p $DAEMON_HOME/cosmovisor/upgrades/multiverse/bin && cp $HOME/go/bin/junod $DAEMON_HOME/cosmovisor/upgrades/multiverse/bin
-# this will return v7.0.0
+# this will return v8.0.0
 $DAEMON_HOME/cosmovisor/upgrades/multiverse/bin/junod version
 ```
 
