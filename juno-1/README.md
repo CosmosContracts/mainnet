@@ -12,6 +12,8 @@ Those that begin `0`, e.g. `0100_MONETA_UPGRADE.md` refer to the pre-attack `jun
 
 Those that begin `1`, e.g. `1100_v3_1_0_UPGRADE.md` refer to the post-attack, relaunched `juno-1`.
 
+Those that begin `2`, e.g. `2100_vx_x_x_UPGRADE.md` refer to the post-July 28 attack, relaunched `juno-1`.
+
 ## Original launch docs
 
 **Note these are left for historical reasons and are no longer relevant to running the chain.**
@@ -84,8 +86,8 @@ export GOPATH=~/go
 
 ### Minimum hardware requirements
 
-- 4GB RAM
-- 250GB of disk space
+- 32-64GB RAM
+- 500GB of disk space
 - 1.4 GHz amd64 CPU
 
 ## Setup validator node
