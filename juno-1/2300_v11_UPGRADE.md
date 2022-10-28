@@ -7,7 +7,7 @@ Juno v11 is a minor change that adds:
 - a pruning command
 - CosmWasm 1.1
 
-Important! you _MUST_ apply this config in `app.toml` when upgrading. This should go in the base configuration section, e.g. under `index-events`:
+**Important!** you _MUST_ apply this config in `app.toml` when upgrading. This should go in the base configuration section, under  the `index-events[]` configuration line:
 
 ```toml
 # IavlCacheSize set the size of the iavl tree cache.
