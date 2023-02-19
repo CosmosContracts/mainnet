@@ -7,7 +7,7 @@ Juno v12 is a minor change that adds bug fixes and version bumps, and _crucially
 Additional links:
 
 - [The upgrade prop is viewable here](https://www.mintscan.io/juno/proposals/249).
-- [The v12.0.0 changelog for the RC v12.0.0-beta.1 is viewable here](https://github.com/CosmosContracts/juno/releases/tag/v12.0.0-beta.1).
+- [The v12.0.0 changelog is viewable here](https://github.com/CosmosContracts/juno/releases/tag/v12.0.0).
 
 The target block for this upgrade is [7075551](https://www.mintscan.io/juno/blocks/7075551), which is expected to arrive on _Mon Feb 20th 2023, at 1700UTC_, +/- 1 hour.
 
