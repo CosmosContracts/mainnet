@@ -17,7 +17,7 @@ These are the instructions you will need if you run cosmovisor:
 cd juno
 git fetch --tags && git checkout v12.0.0
 make build && make install
-# this will return commit TBC
+# this will return commit c5286524143747a3a6df42ef5095a588b78df734
 junod version --long
 
 mkdir -p $DAEMON_HOME/cosmovisor/upgrades/v12/bin && cp $HOME/go/bin/junod $DAEMON_HOME/cosmovisor/upgrades/v12/bin
