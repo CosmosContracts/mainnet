@@ -7,7 +7,7 @@ Additional links:
 - [The upgrade prop is viewable here](https://www.mintscan.io/juno/proposals/XXX).
 - [The v13.0.0 changelog is viewable here](https://github.com/CosmosContracts/juno/releases/tag/v13.0.0).
 
-The target block for this upgrade is [XXX](https://www.mintscan.io/juno/blocks/XXX), which is expected to arrive on _Mon Mar 13th 2023, at 1700UTC_, +/- 1 hour.
+The target block for this upgrade is [7374801](https://www.mintscan.io/juno/blocks/7374801), which is expected to arrive on _Mon Mar 13th 2023, at 1700UTC_, +/- 1 hour.
 
 These are the instructions you will need if you run cosmovisor:
 
