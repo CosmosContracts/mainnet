@@ -2,6 +2,7 @@
 
 Additional links:
 
+- [Proposal #282](https://www.mintscan.io/juno/proposals/282).
 - [The v14.0.0 changelog is viewable here](https://github.com/CosmosContracts/juno/releases/tag/v14.0.0).
 - [Features article](https://medium.com/@JunoNetwork/jun%C3%B8-aurora-ac67a8143e22).
 
