@@ -13,7 +13,7 @@ These are the instructions you will need if you run cosmovisor:
 **Important! app.toml change** 
 The following config change is required for nodes & validators:
 ```toml
-minimum-gas-prices = "0juno"
+minimum-gas-prices = "0ujuno"
 ```
 
 With this, relayers can now also set their hermes, rly, and TS relayer configs to 0ujuno gas price cost.
