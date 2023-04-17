@@ -10,6 +10,14 @@ The target block for this upgrade is [7875721](https://www.mintscan.io/juno/bloc
 
 These are the instructions you will need if you run cosmovisor:
 
+**Important! app.toml change** 
+The following config change is required for nodes & validators:
+```toml
+minimum-gas-prices = "0juno"
+```
+
+With this, relayers can now also set their hermes, rly, and TS relayer configs to 0ujuno gas price cost.
+
 ```bash
 cd juno
 git fetch --tags && git checkout v14.0.0
