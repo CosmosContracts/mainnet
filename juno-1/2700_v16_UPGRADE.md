@@ -2,10 +2,10 @@
 
 Additional links:
 
-- [Proposal #TODO](https://www.mintscan.io/juno/proposals/TODO).
+- [Proposal #311](https://www.mintscan.io/juno/proposals/311).
 - [The v16.0.0 changelog is viewable here](https://github.com/CosmosContracts/juno/releases/tag/v16.0.0).
 
-The target block for this upgrade is [TODO](https://www.mintscan.io/juno/blocks/TODO), which is expected to arrive on _Mon August 7th, 2023 at 1600UTC_, +/- 1 hour.
+The target block for this upgrade is [9481382](https://www.mintscan.io/juno/blocks/9481382), which is expected to arrive on _Mon August 7th, 2023 at 1600UTC_, +/- 1 hour.
 
 These are the instructions you will need if you run cosmo-visor:
 
