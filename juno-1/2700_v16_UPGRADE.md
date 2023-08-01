@@ -21,7 +21,7 @@ junod version --long | grep "cosmos_sdk_version\|commit\|version:"
 
 mkdir -p $DAEMON_HOME/cosmovisor/upgrades/v16/bin && cp $HOME/go/bin/junod $DAEMON_HOME/cosmovisor/upgrades/v16/bin
 
-$DAEMON_HOME/cosmovisor/upgrades/v15/bin/junod version
+$DAEMON_HOME/cosmovisor/upgrades/v16/bin/junod version
 ```
 
 Alternatively, you can run the upgrade the old-fashioned way.
