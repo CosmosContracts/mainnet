@@ -2,7 +2,7 @@
 
 Additional links:
 
-- [Proposal #347]([https://www.mintscan.io/juno/proposals/340](https://www.mintscan.io/juno/proposals/347)).
+- [Proposal #347](https://www.mintscan.io/juno/proposals/347).
 - [The v22.0.0 changelog is viewable here](https://github.com/CosmosContracts/juno/releases/tag/v22.0.0).
 
 The target block for this upgrade is [15873890](https://www.mintscan.io/juno/blocks/15873890), which is expected to arrive on _Tuesday April 30th, 2024 at 1500UTC_, +/- 1 hour.
