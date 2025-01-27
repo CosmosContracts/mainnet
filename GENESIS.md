@@ -107,7 +107,7 @@ To add the core team and multisig vesting accounts we developed an utility to do
 
 ### Compare SHA256 Sum
 
-Now you can compare the SHA256 hash of the provieded genesis.json with yours.
+Now you can compare the SHA256 hash of the provided genesis.json with yours.
 
 ```
 $ jq -S -c -M '' juno-1/pre-genesis.json | shasum -a 256
