@@ -14,6 +14,10 @@ Those that begin `1`, e.g. `1100_v3_1_0_UPGRADE.md` refer to the post-attack, re
 
 Those that begin `2`, e.g. `2100_vx_x_x_UPGRADE.md` refer to the post-July 28 attack, relaunched `juno-1`.
 
+Current upgrade preparation:
+
+- [`3100_v30_UPGRADE.md`](3100_v30_UPGRADE.md) — v30 mainnet operator runbook targeting block `40420069`, subject to on-chain approval.
+
 ## Original launch docs
 
 **Note these are left for historical reasons and are no longer relevant to running the chain.**
