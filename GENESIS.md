@@ -29,7 +29,7 @@ make install
 
 Delete the old `.juno` directory
 
-**NB** This will delete your validator private key, and all your configurations. So it from a development machine.
+**NB** This will delete your validator private key, and all your configurations. So do it from a development machine.
 
 ```
 rm -rf ~/.juno
